@@ -1,4 +1,5 @@
 import css from "../images/css.jpeg";
+import React from "react";
 
 function Skills() {
   return (
