@@ -1,0 +1,24 @@
+.programmer-pic-div {
+  margin-top: 20%;
+  text-align: center;
+}
+
+.programmer-1 {
+  width: 70%;
+  height: auto;
+}
+
+.text-1 {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.text-2 {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 15%;
+}
+
+.text-name {
+  color: #009503;
+}
