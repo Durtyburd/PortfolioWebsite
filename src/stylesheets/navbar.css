@@ -1,0 +1,17 @@
+.nav-link {
+  font-size: 2vw;
+  color: white;
+}
+
+.nav-link:hover {
+  color: #009503;
+}
+
+.navbar-brand {
+  font-size: 3vw;
+}
+
+.navbar {
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
