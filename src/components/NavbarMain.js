@@ -6,7 +6,7 @@ import "../stylesheets/navbar.css";
 
 function NavbarMain() {
   return (
-    <Navbar collapseOnSelect sticky="top" expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="lg" variant="dark">
       <Container>
         <Navbar.Brand href="">Seth Perritt</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
