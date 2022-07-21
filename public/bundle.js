@@ -412,7 +412,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"About\": function() { return /* binding */ About; }\n/* harmony export */ });\n/* harmony import */ var _stylesheets_about_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../stylesheets/about.css */ \"./src/stylesheets/about.css\");\n/* harmony import */ var _images_programmer_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../images/programmer.png */ \"./src/images/programmer.png\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\nfunction About() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement(\"div\", {\n    className: \"programmer-pic-div\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement(\"h1\", {\n    className: \"text-1\"\n  }, \"Hello,\", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement(\"br\", null), \" my name is\", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement(\"span\", {\n    className: \"text-name\"\n  }, \" Seth Perritt\"), \".\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement(\"img\", {\n    alt: \"pic of programmer\",\n    className: \"programmer-1\",\n    src: _images_programmer_png__WEBPACK_IMPORTED_MODULE_1__[\"default\"]\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement(\"h1\", {\n    className: \"text-2\"\n  }, \"I am a self-taught\", \" \", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement(\"span\", {\n    style: {\n      color: \"#009503\"\n    }\n  }, \"Web Developer\"), \", with a passion for learning new technologies.\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement(\"hr\", null));\n}\n\n\n\n//# sourceURL=webpack://my-app/./src/components/About.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"About\": function() { return /* binding */ About; }\n/* harmony export */ });\n/* harmony import */ var _stylesheets_about_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../stylesheets/about.css */ \"./src/stylesheets/about.css\");\n/* harmony import */ var _images_programmer1_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../images/programmer1.png */ \"./src/images/programmer1.png\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\nfunction About() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement(\"div\", {\n    className: \"programmer-pic-div\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement(\"h1\", {\n    className: \"text-1\"\n  }, \"Hello,\", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement(\"br\", null), \" my name is\", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement(\"span\", {\n    className: \"text-name\"\n  }, \" Seth Perritt\"), \".\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement(\"img\", {\n    alt: \"pic of programmer\",\n    className: \"programmer-1\",\n    src: _images_programmer1_png__WEBPACK_IMPORTED_MODULE_1__[\"default\"]\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement(\"h1\", {\n    className: \"text-2\"\n  }, \"I am a self-taught\", \" \", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement(\"span\", {\n    style: {\n      color: \"#009503\"\n    }\n  }, \"Web Developer\"), \", with a passion for learning new technologies.\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement(\"hr\", null));\n}\n\n\n\n//# sourceURL=webpack://my-app/./src/components/About.js?");
 
 /***/ }),
 
@@ -800,14 +800,14 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 /***/ }),
 
-/***/ "./src/images/programmer.png":
-/*!***********************************!*\
-  !*** ./src/images/programmer.png ***!
-  \***********************************/
+/***/ "./src/images/programmer1.png":
+/*!************************************!*\
+  !*** ./src/images/programmer1.png ***!
+  \************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"e8b903ebca5591d7b34adc54465a2741.png\");\n\n//# sourceURL=webpack://my-app/./src/images/programmer.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"00992e71d05e64588f7d38703d1f8665.png\");\n\n//# sourceURL=webpack://my-app/./src/images/programmer1.png?");
 
 /***/ }),
 
