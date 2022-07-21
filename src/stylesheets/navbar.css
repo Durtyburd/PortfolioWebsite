@@ -9,9 +9,16 @@
 
 .navbar-brand {
   font-size: 3vw;
+  color: #009503;
+}
+
+.navbar-brand:hover {
+  color: #009503;
 }
 
 .navbar {
   padding-top: 1%;
   padding-bottom: 1%;
+  background-color: black;
+  border-bottom: 2px solid #009503;
 }

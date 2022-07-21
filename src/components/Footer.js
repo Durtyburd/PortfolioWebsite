@@ -10,9 +10,10 @@ function Footer() {
         paddingRight: "10%",
         paddingBottom: "2%",
         position: "absolute",
-        backgroundColor: "#212529",
+        backgroundColor: "black",
         width: "100%",
         textAlign: "center",
+        borderTop: "2px solid #009503",
       }}
     >
       <h1>
