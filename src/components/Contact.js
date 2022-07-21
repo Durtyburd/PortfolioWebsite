@@ -194,6 +194,7 @@ function Contact({
                 style={{
                   fontSize: "3vw",
                 }}
+                as="textarea"
                 onChange={handleChange5}
                 value={messageText}
                 placeholder="Please type your message here..."
