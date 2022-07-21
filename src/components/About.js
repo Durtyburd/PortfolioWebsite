@@ -1,5 +1,5 @@
 import "../stylesheets/about.css";
-import programmer from "../images/programmer.png";
+import programmer from "../images/programmer1.png";
 import React from "react";
 
 function About() {
