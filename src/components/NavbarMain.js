@@ -2,11 +2,12 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import React from "react";
+
 import "../stylesheets/navbar.css";
 
 function NavbarMain() {
   return (
-    <Navbar collapseOnSelect expand="lg" variant="dark">
+    <Navbar collapseOnSelect sticky="top" expand="lg" variant="dark">
       <Container>
         <Navbar.Brand href="">Seth Perritt</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
