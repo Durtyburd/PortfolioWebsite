@@ -3,6 +3,8 @@ import { Button } from "react-bootstrap";
 import React from "react";
 import placeholder from "../images/placeholder.jpg";
 
+import "../stylesheets/projects.css";
+
 function Projects({ index, setIndex }) {
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
@@ -18,6 +20,7 @@ function Projects({ index, setIndex }) {
       >
         Projects
       </h1>
+
       <Carousel
         style={{
           textAlign: "center",
@@ -57,18 +60,50 @@ function Projects({ index, setIndex }) {
           <img className="d-block w-100" src={placeholder} alt="Second slide" />
 
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h1 style={{ fontSize: "6vw" }}>Lorem Ipsum</h1>
+            <h1 style={{ fontSize: "3.5vw" }}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h1>
+            <Button
+              style={{
+                fontSize: "3.5vw",
+                marginTop: "5%",
+                backgroundColor: "#009503",
+                color: "black",
+                border: "none",
+              }}
+              variant="primary"
+              type="submit"
+              href="#"
+            >
+              COMING SOON
+            </Button>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img className="d-block w-100" src={placeholder} alt="Third slide" />
 
           <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+            <h1 style={{ fontSize: "6vw" }}>Lorem Ipsum</h1>
+            <h1 style={{ fontSize: "3.5vw" }}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h1>
+            <Button
+              style={{
+                fontSize: "3.5vw",
+                marginTop: "5%",
+                backgroundColor: "#009503",
+                color: "black",
+                border: "none",
+              }}
+              variant="primary"
+              type="submit"
+              href="#"
+            >
+              COMING SOON
+            </Button>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
