@@ -26,6 +26,12 @@ function Footer() {
         </a>
         .
       </h1>
+      <a
+        style={{ display: "none" }}
+        href="https://www.freepik.com/vectors/application-development"
+      >
+        Application development vector created by upklyak - www.freepik.com
+      </a>
     </div>
   );
 }
