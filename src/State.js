@@ -4,7 +4,6 @@ import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
-import { Particle } from "./components/Particle";
 
 import React, { useState } from "react";
 
@@ -49,7 +48,6 @@ function State() {
         setMessageText={setMessageText}
       />
       <Footer />
-      <Particle />
     </div>
   );
 }
