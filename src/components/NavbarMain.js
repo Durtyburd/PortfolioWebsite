@@ -9,7 +9,7 @@ function NavbarMain() {
   return (
     <Navbar collapseOnSelect sticky="top" expand="lg" variant="dark">
       <Container>
-        <Navbar.Brand href="">Seth Perritt</Navbar.Brand>
+        <Navbar.Brand className="myName">Seth Perritt</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
