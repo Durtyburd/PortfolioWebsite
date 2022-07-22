@@ -26,13 +26,16 @@ function State() {
   //Message Text Handler
   const [messageText, setMessageText] = useState("");
 
+  //Projects Carousel Interval
+  const [index, setIndex] = useState(0);
+
   return (
     //Page Layout
     <div>
       <NavbarMain />
       <About />
       <Skills />
-      <Projects />
+      <Projects index={index} setIndex={setIndex} />
       <Contact
         firstText={firstText}
         setFirstText={setFirstText}

@@ -1,8 +1,12 @@
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
+import { Carousel } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import React from "react";
+import placeholder from "../images/placeholder.jpg";
 
-function Projects() {
+function Projects({ index, setIndex }) {
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
   return (
     <>
       <h1
@@ -14,66 +18,60 @@ function Projects() {
       >
         Projects
       </h1>
-      <Card
+      <Carousel
         style={{
-          backgroundColor: "#009503",
-          marginLeft: "10%",
-          marginRight: "10%",
-          marginTop: "15%",
-        }}
-        className="text-center"
-      >
-        <Card.Body>
-          <Card.Title>To Do List</Card.Title>
-          <Card.Text>
-            A to-do list that was built with reactjs for the frontend, and the
-            backend is written in Java. The project is currently unavaiable due
-            to the server being down.
-          </Card.Text>
-          <Button variant="dark">Server Down</Button>
-        </Card.Body>
-      </Card>
-      <Card
-        style={{
-          backgroundColor: "#009503",
-          marginLeft: "10%",
-          marginRight: "10%",
-          marginTop: "5%",
-        }}
-        className="text-center"
-      >
-        <Card.Body>
-          <Card.Title>Lorem Ipsum</Card.Title>
-          <Card.Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa
-            ultricies mi quis hendrerit dolor magna eget est. Risus in hendrerit
-            gravida rutrum quisque non tellus orci.
-          </Card.Text>
-          <Button variant="dark">COMING SOON</Button>
-        </Card.Body>
-      </Card>
-      <Card
-        style={{
-          backgroundColor: "#009503",
-          marginLeft: "10%",
-          marginRight: "10%",
+          textAlign: "center",
           marginTop: "5%",
           marginBottom: "20%",
+          borderTop: "2px solid #009503",
+          borderBottom: "2px solid #009503",
         }}
-        className="text-center"
+        activeIndex={index}
+        onSelect={handleSelect}
       >
-        <Card.Body>
-          <Card.Title>Lorem Ipsum</Card.Title>
-          <Card.Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa
-            ultricies mi quis hendrerit dolor magna eget est. Risus in hendrerit
-            gravida rutrum quisque non tellus orci.
-          </Card.Text>
-          <Button variant="dark">COMING SOON</Button>
-        </Card.Body>
-      </Card>
+        <Carousel.Item>
+          <img className="d-block w-100" src={placeholder} alt="First slide" />
+          <Carousel.Caption>
+            <h1 style={{ fontSize: "6vw" }}>To Do List</h1>
+            <h1 style={{ fontSize: "3.5vw" }}>
+              A CRUD application utilizing HTML5, CSS3, ReactJS, Java, Maven,
+              and HTTP API's.
+            </h1>
+            <Button
+              style={{
+                fontSize: "3.5vw",
+                marginTop: "5%",
+                backgroundColor: "#009503",
+                color: "black",
+                border: "none",
+              }}
+              variant="primary"
+              type="submit"
+              href="https://github.com/Durtyburd/TerminalToDoList"
+            >
+              Let's Go!
+            </Button>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img className="d-block w-100" src={placeholder} alt="Second slide" />
+
+          <Carousel.Caption>
+            <h3>Second slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img className="d-block w-100" src={placeholder} alt="Third slide" />
+
+          <Carousel.Caption>
+            <h3>Third slide label</h3>
+            <p>
+              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            </p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
     </>
   );
 }
