@@ -64,7 +64,9 @@ function Contact({
 
   return (
     <>
-      <h1 style={{ marginLeft: "10%", color: "#009503" }}>Contact:</h1>
+      <h1 style={{ fontSize: "8vw", textAlign: "center", color: "#009503" }}>
+        Contact
+      </h1>
 
       <Form
         style={{

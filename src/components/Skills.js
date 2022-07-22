@@ -5,10 +5,10 @@ function Skills() {
   return (
     <>
       <h1
-        style={{ marginLeft: "10%", color: "#009503" }}
+        style={{ fontSize: "8vw", textAlign: "center", color: "#009503" }}
         className="text-skills"
       >
-        Skills:
+        Skills
       </h1>
       <div
         style={{

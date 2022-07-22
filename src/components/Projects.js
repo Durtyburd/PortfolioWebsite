@@ -5,7 +5,15 @@ import React from "react";
 function Projects() {
   return (
     <>
-      <h1 style={{ marginLeft: "10%", color: "#009503" }}>Projects:</h1>
+      <h1
+        style={{
+          fontSize: "8vw",
+          textAlign: "center",
+          color: "#009503",
+        }}
+      >
+        Projects
+      </h1>
       <Card
         style={{
           backgroundColor: "#009503",
@@ -16,12 +24,13 @@ function Projects() {
         className="text-center"
       >
         <Card.Body>
-          <Card.Title>Special title treatment</Card.Title>
+          <Card.Title>To Do List</Card.Title>
           <Card.Text>
-            With supporting text below as a natural lead-in to additional
-            content.
+            A to-do list that was built with reactjs for the frontend, and the
+            backend is written in Java. The project is currently unavaiable due
+            to the server being down.
           </Card.Text>
-          <Button variant="dark">Go somewhere</Button>
+          <Button variant="dark">Server Down</Button>
         </Card.Body>
       </Card>
       <Card
@@ -34,12 +43,14 @@ function Projects() {
         className="text-center"
       >
         <Card.Body>
-          <Card.Title>Special title treatment</Card.Title>
+          <Card.Title>Lorem Ipsum</Card.Title>
           <Card.Text>
-            With supporting text below as a natural lead-in to additional
-            content.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa
+            ultricies mi quis hendrerit dolor magna eget est. Risus in hendrerit
+            gravida rutrum quisque non tellus orci.
           </Card.Text>
-          <Button variant="dark">Go somewhere</Button>
+          <Button variant="dark">COMING SOON</Button>
         </Card.Body>
       </Card>
       <Card
@@ -53,12 +64,14 @@ function Projects() {
         className="text-center"
       >
         <Card.Body>
-          <Card.Title>Special title treatment</Card.Title>
+          <Card.Title>Lorem Ipsum</Card.Title>
           <Card.Text>
-            With supporting text below as a natural lead-in to additional
-            content.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa
+            ultricies mi quis hendrerit dolor magna eget est. Risus in hendrerit
+            gravida rutrum quisque non tellus orci.
           </Card.Text>
-          <Button variant="dark">Go somewhere</Button>
+          <Button variant="dark">COMING SOON</Button>
         </Card.Body>
       </Card>
     </>

@@ -15,7 +15,6 @@ function About() {
         <span style={{ color: "#009503" }}>Web Developer</span>, with a passion
         for learning new technologies.
       </h1>
-      <hr></hr>
     </div>
   );
 }
