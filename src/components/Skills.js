@@ -5,7 +5,6 @@ import nodeJsPic from "../images/nodejs.png";
 import npmPic from "../images/npm.png";
 
 import React from "react";
-import { node } from "webpack";
 
 function Skills() {
   return (
@@ -26,7 +25,7 @@ function Skills() {
       >
         <img
           className="image-1"
-          alt="css"
+          alt="html"
           src={htmlPic}
           style={{ width: "17vw" }}
         />
@@ -38,7 +37,7 @@ function Skills() {
         />
         <img
           className="image-3"
-          alt="css"
+          alt="js"
           src={jsPic}
           style={{ width: "17vw" }}
         />
@@ -49,24 +48,52 @@ function Skills() {
           marginTop: "5%",
           marginLeft: "10%",
           marginRight: "10%",
-          marginBottom: "20%",
         }}
       >
         <img
           className="image-1"
-          alt="css"
+          alt="nodeJS"
           src={nodeJsPic}
           style={{ width: "17vw" }}
         />
         <img
           className="image-2"
-          alt="css"
+          alt="npm"
           src={npmPic}
           style={{ width: "17vw", marginLeft: "10%", marginRight: "10%" }}
         />
         <img
           className="image-3"
-          alt="css"
+          alt="npm"
+          src={npmPic}
+          style={{ width: "17vw" }}
+        />
+      </div>
+      {/* new div below */}
+      <div
+        style={{
+          textAlign: "center",
+          marginLeft: "10%",
+          marginRight: "10%",
+          marginTop: "5%",
+          marginBottom: "20%",
+        }}
+      >
+        <img
+          className="image-1"
+          alt="nodeJS"
+          src={nodeJsPic}
+          style={{ width: "17vw" }}
+        />
+        <img
+          className="image-2"
+          alt="npm"
+          src={npmPic}
+          style={{ width: "17vw", marginLeft: "10%", marginRight: "10%" }}
+        />
+        <img
+          className="image-3"
+          alt="npm"
           src={npmPic}
           style={{ width: "17vw" }}
         />
