@@ -4,8 +4,6 @@ import React from "react";
 
 function Particle() {
   const particlesInit = async (main) => {
-    console.log(main);
-
     // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
     // starting from v2 you can add only the features you need reducing the bundle size
@@ -89,12 +87,9 @@ function Particle() {
         interactivity: {
           events: {
             onhover: {
+              //Change to false to remove weird particle reload affect
               enable: true,
               mode: ["grab"],
-            },
-            onclick: {
-              enable: false,
-              mode: "bubble",
             },
             resize: true,
           },
@@ -104,22 +99,6 @@ function Particle() {
               line_linked: {
                 opacity: 1,
               },
-            },
-            bubble: {
-              distance: 400,
-              size: 100,
-              duration: 5,
-              opacity: 8,
-              speed: 5,
-            },
-            repulse: {
-              distance: 200,
-            },
-            push: {
-              particles_nb: 4,
-            },
-            remove: {
-              particles_nb: 2,
             },
           },
         },
