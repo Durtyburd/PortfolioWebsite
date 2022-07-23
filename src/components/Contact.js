@@ -2,7 +2,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import React, { useCallback } from "react";
+import React, { useState } from "react";
 
 function Contact({
   firstText,
@@ -11,11 +11,25 @@ function Contact({
   setLastText,
   emailText,
   setEmailText,
-  confirmEmailText,
-  setConfirmEmailText,
+  subjectText,
+  setSubjectText,
   messageText,
   setMessageText,
+  validated,
+  setValidated,
 }) {
+  //Form Validation
+
+  const handleSubmit = (event) => {
+    const form = event.currentTarget;
+
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    setValidated(true);
+  };
+
   //Handle Text Changes
 
   //First Name Input
@@ -35,31 +49,12 @@ function Contact({
 
   //Confirm Email Input
   const handleChange4 = (e) => {
-    setConfirmEmailText(e.target.value);
+    setSubjectText(e.target.value);
   };
 
   //Message input
   const handleChange5 = (e) => {
     setMessageText(e.target.value);
-  };
-
-  //Form Validation & Message Generator
-  const messageGenerator = (e) => {
-    e.preventDefault();
-    if (
-      firstText === "" ||
-      lastText === "" ||
-      emailText === "" ||
-      messageText === ""
-    ) {
-      alert("Please fill out all fields.");
-    } else if (emailText !== confirmEmailText) {
-      alert("Please confirm email address.");
-    } else {
-      console.log(
-        emailText + "\n" + firstText + " " + lastText + "\n" + messageText
-      );
-    }
   };
 
   return (
@@ -75,23 +70,29 @@ function Contact({
           marginRight: "10%",
           marginTop: "5%",
         }}
+        noValidate
+        validated={validated}
+        onSubmit={handleSubmit}
       >
         <Row className="mb-3">
           <Col sm="6">
             <Form.Group controlId="formFirstName">
               <Form.Label style={{ marginTop: "5%", fontSize: "3.5vw" }}>
-                <span style={{ color: "red", fontSize: "1.5vw" }}>*</span>First
-                Name:
+                First Name:
               </Form.Label>
               <Form.Control
                 style={{
                   fontSize: "3vw",
                 }}
+                required
                 onChange={handleChange1}
                 value={firstText}
                 type="firstName"
                 placeholder="Enter first name"
               />
+              <Form.Control.Feedback type="invalid">
+                Please enter your first name.
+              </Form.Control.Feedback>
             </Form.Group>
           </Col>
 
@@ -103,28 +104,32 @@ function Contact({
                   fontSize: "3.5vw",
                 }}
               >
-                <span style={{ color: "red", fontSize: "1.5vw" }}>*</span>
                 Last Name:
               </Form.Label>
               <Form.Control
                 style={{
                   fontSize: "3vw",
                 }}
+                required
                 onChange={handleChange2}
                 value={lastText}
                 type="lastName"
                 placeholder="Enter last name"
               />
+              <Form.Control.Feedback type="invalid">
+                Please enter your last name.
+              </Form.Control.Feedback>
             </Form.Group>
           </Col>
         </Row>
 
-        <Row className="mb-3">
-          <Col sm="6">
+        <Row>
+          <Col sm="12">
             <Form.Group
               style={{
                 marginTop: "5%",
               }}
+              className="mb-3"
               controlId="formEmail"
             >
               <Form.Label
@@ -132,45 +137,52 @@ function Contact({
                   fontSize: "3.5vw",
                 }}
               >
-                <span style={{ color: "red", fontSize: "1.5vw" }}>*</span>
                 Email:
               </Form.Label>
               <Form.Control
                 style={{
                   fontSize: "3vw",
                 }}
+                required
                 onChange={handleChange3}
                 value={emailText}
-                type="email"
-                placeholder="Enter email"
+                placeholder="Please type your email here..."
               />
+              <Form.Control.Feedback type="invalid">
+                Please enter your email.
+              </Form.Control.Feedback>
             </Form.Group>
           </Col>
+        </Row>
 
-          <Col sm="6">
+        <Row>
+          <Col sm="12">
             <Form.Group
               style={{
                 marginTop: "5%",
               }}
-              controlId="formConfirmEmail"
+              className="mb-3"
+              controlId="formSubject"
             >
               <Form.Label
                 style={{
                   fontSize: "3.5vw",
                 }}
               >
-                <span style={{ color: "red", fontSize: "1.5vw" }}>*</span>
-                Confirm Email:
+                Subject:
               </Form.Label>
               <Form.Control
                 style={{
                   fontSize: "3vw",
                 }}
+                required
                 onChange={handleChange4}
-                value={confirmEmailText}
-                type="confirmEmail"
-                placeholder="Confirm email"
+                value={subjectText}
+                placeholder="Please type your subject here..."
               />
+              <Form.Control.Feedback type="invalid">
+                Please enter a subject.
+              </Form.Control.Feedback>
             </Form.Group>
           </Col>
         </Row>
@@ -189,18 +201,21 @@ function Contact({
                   fontSize: "3.5vw",
                 }}
               >
-                <span style={{ color: "red", fontSize: "1.5vw" }}>*</span>
                 Message:
               </Form.Label>
               <Form.Control
                 style={{
                   fontSize: "3vw",
                 }}
+                required
                 as="textarea"
                 onChange={handleChange5}
                 value={messageText}
                 placeholder="Please type your message here..."
               />
+              <Form.Control.Feedback type="invalid">
+                Please enter a message.
+              </Form.Control.Feedback>
             </Form.Group>
           </Col>
         </Row>
@@ -215,7 +230,6 @@ function Contact({
             }}
             variant="primary"
             type="submit"
-            onClick={messageGenerator}
           >
             Submit
           </Button>

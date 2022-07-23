@@ -20,10 +20,13 @@ function State() {
   const [emailText, setEmailText] = useState("");
 
   //Email Confirmation Text Handler
-  const [confirmEmailText, setConfirmEmailText] = useState("");
+  const [subjectText, setSubjectText] = useState("");
 
   //Message Text Handler
   const [messageText, setMessageText] = useState("");
+
+  //Form Validator
+  const [validated, setValidated] = useState(false);
 
   //Projects Carousel Interval
   const [index, setIndex] = useState(0);
@@ -42,10 +45,12 @@ function State() {
         setLastText={setLastText}
         emailText={emailText}
         setEmailText={setEmailText}
-        confirmEmailText={confirmEmailText}
-        setConfirmEmailText={setConfirmEmailText}
+        subjectText={subjectText}
+        setSubjectText={setSubjectText}
         messageText={messageText}
         setMessageText={setMessageText}
+        validated={validated}
+        setValidated={setValidated}
       />
       <Footer />
     </div>
