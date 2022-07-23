@@ -71,7 +71,10 @@ function Contact({
 
   return (
     <>
-      <h1 style={{ fontSize: "8vw", textAlign: "center", color: "#009503" }}>
+      <h1
+        className="contact-text"
+        style={{ fontSize: "8vw", textAlign: "center", color: "#009503" }}
+      >
         Contact
       </h1>
 
