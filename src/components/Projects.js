@@ -12,6 +12,7 @@ function Projects({ index, setIndex }) {
   return (
     <>
       <h1
+        className="project-text"
         style={{
           fontSize: "8vw",
           textAlign: "center",
