@@ -25,9 +25,21 @@ function Contact({
 
     if (form.checkValidity() === false) {
       event.preventDefault();
-      event.stopPropagation();
+      setValidated(true);
     }
-    setValidated(true);
+    //Remove line below to refresh form on submit
+    event.preventDefault();
+    console.log(
+      emailText +
+        "\n" +
+        firstText +
+        " " +
+        lastText +
+        "\n" +
+        subjectText +
+        "\n" +
+        messageText
+    );
   };
 
   //Handle Text Changes
