@@ -58,10 +58,6 @@ function NavbarMain() {
             >
               Contact
             </Nav.Link>
-            {/* <Nav.Link href="https://github.com/Durtyburd">Github</Nav.Link>
-            <Nav.Link href="https://www.linkedin.com/in/sethperritt">
-              LinkedIn
-            </Nav.Link> */}
           </Nav>
         </Navbar.Collapse>
       </Container>
