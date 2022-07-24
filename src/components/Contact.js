@@ -2,7 +2,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import React, { useState } from "react";
+import React from "react";
 
 function Contact({
   firstText,
@@ -17,6 +17,8 @@ function Contact({
   setMessageText,
   validated,
   setValidated,
+  formData,
+  updateFormData,
 }) {
   //Form Validation
 
@@ -26,47 +28,83 @@ function Contact({
     if (form.checkValidity() === false) {
       event.preventDefault();
       setValidated(true);
+    } else {
+      formButtonSubmit();
     }
     //Remove line below to refresh form on submit
     event.preventDefault();
-    console.log(
-      emailText +
-        "\n" +
-        firstText +
-        " " +
-        lastText +
-        "\n" +
-        subjectText +
-        "\n" +
-        messageText
-    );
   };
 
   //Handle Text Changes
-
   //First Name Input
   const handleChange1 = (e) => {
     setFirstText(e.target.value);
+    updateFormData({
+      ...formData,
+      [e.target.name]: e.target.value.trim(),
+    });
   };
 
   //Last Name Input
   const handleChange2 = (e) => {
     setLastText(e.target.value);
+    updateFormData({
+      ...formData,
+      [e.target.name]: e.target.value.trim(),
+    });
   };
 
   //Email Input
   const handleChange3 = (e) => {
     setEmailText(e.target.value);
+    updateFormData({
+      ...formData,
+      [e.target.name]: e.target.value.trim(),
+    });
   };
 
   //Confirm Email Input
   const handleChange4 = (e) => {
     setSubjectText(e.target.value);
+    updateFormData({
+      ...formData,
+      [e.target.name]: e.target.value.trim(),
+    });
   };
 
   //Message input
   const handleChange5 = (e) => {
     setMessageText(e.target.value);
+    updateFormData({
+      ...formData,
+      [e.target.name]: e.target.value.trim(),
+    });
+  };
+
+  //Button Submit
+  const formButtonSubmit = (e) => {
+    alert(`Thank you for your message. Your query has been forwarded.`);
+    const templateId = "template_c9zt4dg";
+    const serviceID = "service_rtrp0dl";
+    sendFeedback(serviceID, templateId, {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+    });
+    console.log(formData);
+  };
+
+  //Send Feedback
+  const sendFeedback = (serviceID, templateId, variables) => {
+    window.emailjs
+      .send(serviceID, templateId, variables)
+      .then((res) => {
+        console.log(res);
+        console.log("Email successfully sent!");
+      })
+      .catch((err) => console.error("There has been an Error.", err));
   };
 
   return (
@@ -100,6 +138,7 @@ function Contact({
                   fontSize: "3vw",
                 }}
                 required
+                name="firstName"
                 onChange={handleChange1}
                 value={firstText}
                 type="firstName"
@@ -126,6 +165,7 @@ function Contact({
                   fontSize: "3vw",
                 }}
                 required
+                name="lastName"
                 onChange={handleChange2}
                 value={lastText}
                 type="lastName"
@@ -159,6 +199,7 @@ function Contact({
                   fontSize: "3vw",
                 }}
                 required
+                name="email"
                 onChange={handleChange3}
                 value={emailText}
                 placeholder="Please type your email here..."
@@ -191,6 +232,7 @@ function Contact({
                   fontSize: "3vw",
                 }}
                 required
+                name="subject"
                 onChange={handleChange4}
                 value={subjectText}
                 placeholder="Please type your subject here..."
@@ -223,6 +265,7 @@ function Contact({
                   fontSize: "3vw",
                 }}
                 required
+                name="message"
                 as="textarea"
                 onChange={handleChange5}
                 value={messageText}

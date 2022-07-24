@@ -31,6 +31,18 @@ function State() {
   //Projects Carousel Interval
   const [index, setIndex] = useState(0);
 
+  //Initial Form Data
+  const initialFormData = Object.freeze({
+    firstName: "",
+    lastName: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  //Form Data
+  const [formData, updateFormData] = useState(initialFormData);
+
   return (
     //Page Layout
     <div>
@@ -51,6 +63,8 @@ function State() {
         setMessageText={setMessageText}
         validated={validated}
         setValidated={setValidated}
+        formData={formData}
+        updateFormData={updateFormData}
       />
       <Footer />
     </div>
